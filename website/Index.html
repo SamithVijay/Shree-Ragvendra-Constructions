@@ -12,41 +12,6 @@
         background-color: #fff;
       }
 
-      /* .header {
-        display: flex;
-        justify-content: space-between;
-        font-family: Arial, Helvetica, sans-serif;
-        align-items: center;
-        padding: 20px;
-      }
-
-      .header img {
-        width: 80px;
-        height: auto;
-        margin-right: 15px;
-      }
-      .header h1 {
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .nav {
-        display: flex;
-        gap: 20px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: #999;
-        font-weight: bold;
-      }
-
-      .nav a.active {
-        color: #000;
-        background-color: #000;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
-      } */
       /* Header Styling */
       .header {
         display: flex;
@@ -95,12 +60,15 @@
         padding: 10px 20px;
         border-radius: 5px;
       }
+
       .contact a {
         color: white;
       }
+
       .contact-btn:hover {
         background-color: #555;
       }
+
       /* Hero Section Styling */
       .hero {
         position: relative;
@@ -176,102 +144,258 @@
       }
 
       .about-section {
+        font-family: "Times New Roman", Times, serif;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 50px;
-        background-color: #111;
-        color: #fff;
+        height: 80vh;
+        background-color: #181a22;
       }
 
       .about-text {
         max-width: 50%;
+        color: #fff;
       }
 
       .about-text h3 {
-        font-size: 36px;
-        margin: 0;
+        font-size: 3.5rem;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 20px;
       }
 
       .about-text p {
-        margin: 20px 0;
-        font-size: 18px;
+        font-size: 1.25rem;
         line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .btn-learn-more {
+        display: inline-block;
+        background-color: #fff;
+        color: #333;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
       }
 
+      .btn-learn-more:hover {
+        background-color: #ccc;
+      }
+      .about-image {
+        position: relative;
+        max-width: 40%;
+      }
       .about-image img {
-        max-width: 100%;
-        height: auto;
         border-radius: 50%;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .about-section {
+          flex-direction: column;
+          text-align: center;
+          height: auto;
+        }
+
+        .about-text {
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .about-text h3 {
+          font-size: 2.5rem;
+        }
+
+        .about-text p {
+          font-size: 1rem;
+        }
+
+        .about-image {
+          max-width: 80%;
+        }
+      }
+      /* Expertise Section Styling */
+      .expertise-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        background-color: #fff;
+        color: #333;
       }
 
-      .portfolio-section {
-        padding: 50px 20px;
+      .expertise-text {
+        max-width: 50%;
+      }
+
+      .expertise-text h4 {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .expertise-text h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .expertise-text p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #555;
+      }
+
+      .discover-work {
+        font-size: 1.1rem;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+        transition: color 0.3s ease;
+      }
+
+      .discover-work:hover {
+        color: #666;
+      }
+
+      .expertise-image {
+        max-width: 45%;
+      }
+
+      .expertise-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .expertise-section {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .expertise-text {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .expertise-image {
+          max-width: 100%;
+        }
+      }
+      /* Section Styles */
+      .work-cards-section {
+        padding: 60px 20px;
+        background-color: #f8f8f8;
+        text-align: center;
+      }
+
+      .work-cards-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #555;
+      }
+
+      /* Cards Container */
+      .cards-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      /* Individual Work Card */
+      .work-card {
+        background-color: #000;
+        color: #fff;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .work-card h3 {
+        font-size: 1.25rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .work-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 40px;
+      }
+
+      /* Logo Styling */
+      .logo {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .logo img {
+        max-width: 60px;
+        height: auto;
+      }
+
+      /* Footer Styles */
+      .card-footer {
         text-align: left;
       }
 
-      .portfolio-section h3 {
-        font-size: 36px;
-        margin-bottom: 20px;
-      }
-
-      .portfolio-text {
-        font-size: 18px;
-        margin-bottom: 20px;
-        max-width: 600px;
-        margin-left: 20px;
-        margin-right: auto;
-      }
-
-      .portfolio-button {
-        background-color: #b37878;
-        color: #fff;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-size: 16px;
+      .card-footer span {
+        background-color: #fff;
+        color: #000;
+        padding: 5px 10px;
         border-radius: 5px;
-      }
-      .discover-work {
-        margin-left: 20px;
-      }
-      .cards {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        margin-left: 30px;
-        max-width: auto;
-        margin-right: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
       }
 
-      .card {
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        width: 30%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .cards-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .work-card {
+          width: 90%;
+        }
       }
 
-      .card h3 {
-        margin-top: 0;
-        font-size: 24px;
-      }
-
-      .card p {
-        font-size: 16px;
-      }
-      /*shaping-section*/
+      /* Shaping Section */
       .shaping-section {
         margin-left: 20px;
       }
+
       .shaping-section h3 {
         text-align: center;
         font-size: 36px;
         margin-bottom: 40px;
       }
+
       .shaping-section h2 {
         text-align: right;
         font-size: 30px;
         margin-right: 150px;
         margin-bottom: 40px;
       }
+
       /* Testimonials Section */
       .testimonials-section {
         padding: 50px;
@@ -417,42 +541,121 @@
         width: 100%;
         padding: 10px;
         margin-bottom: 20px;
-        font-size: 16px;
         border: 1px solid #ddd;
         border-radius: 5px;
+        font-size: 16px;
       }
 
       .contact-form textarea {
-        height: 120px;
+        resize: vertical;
+        height: 150px;
       }
 
       .contact-form button {
-        background-color: #3de69c;
+        background-color: black;
         color: white;
         padding: 10px 20px;
         font-size: 16px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
       }
 
       .contact-form button:hover {
-        background-color: #35c688;
+        background-color: #3de69c;
       }
 
-      /* Responsive Design */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      /* Responsive CSS */
       @media (max-width: 768px) {
+        /* Header Adjustments */
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav ul li {
+          margin: 10px 0;
+        }
+
+        .contact-btn {
+          margin-top: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+          height: auto;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .quote-btn {
+          font-size: 0.875rem;
+          padding: 10px 20px;
+        }
+
+        /* About Section */
+        .about-section {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .about-text,
+        .about-image {
+          max-width: 100%;
+        }
+
+        /* Portfolio Section */
+        .cards {
+          flex-direction: column;
+        }
+
+        .card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        /* Contact Section */
         .contact-info-form {
           flex-direction: column;
         }
 
         .contact-info,
         .contact-form {
-          margin: 0 0 20px 0;
+          margin: 0;
+        }
+
+        .form-group {
+          flex-direction: column;
+        }
+
+        .form-group input {
+          width: 100%;
         }
       }
-
       footer {
         background-color: #181a22;
         padding: 40px 0;
@@ -598,56 +801,96 @@
     <section class="about-section">
       <div class="about-text">
         <h3>Innovative Solutions for Your Construction Needs</h3>
+        <br />
         <p>
           From residential and commercial projects to large-scale infrastructure
-          developments, our team of experienced professionals utilizes the
-          latest technology and industry best practices to ensure the highest
-          standards of quality and efficiency.
+          developments,<br />
+          <br />
+          Our team of experienced professionals utilizes the latest technology
+          and industry best practices to ensure the highest standards of quality
+          and efficiency.
         </p>
+        <a href="#" class="btn-learn-more">Learn More</a>
       </div>
       <div class="about-image">
-        <img src="building-image-2.png" alt="Building Image" />
+        <img
+          src="./KG2ZmFifzPPFkHIeKp7tcZ-4096x4096.png"
+          alt="Building Image"
+        />
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section">
-      <h3>Our Expertise</h3>
-      <p class="portfolio-text">
-        At Shree Raghavendra Constructions, we have a proven track record of
-        delivering exceptional results for our clients. Our team of skilled
-        professionals combines industry expertise, innovative techniques, and a
-        commitment to quality in every project we undertake.
-      </p>
+    <section class="expertise-section">
+      <div class="expertise-text">
+        <h4>Our Portfolio</h4>
+        <h1>Our Expertise</h1>
+        <p>
+          At Shree Raghavendra Constructions, we have a proven track record of
+          delivering exceptional results for our clients. Our team of skilled
+          professionals combines industry expertise, innovative techniques.
+        </p>
+        <a href="#" class="discover-work">Discover Our Work</a>
+      </div>
+      <div class="expertise-image">
+        <img
+          src="./BtBu26NslewHU0ZqAQnjp8-4096x4096.png"
+          alt="Portfolio Image"
+        />
+      </div>
     </section>
 
     <!-- Discover Our Work Section -->
-    <section class="discover-work">
+    <section class="work-cards-section">
       <h2>Discover Our Work</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Residential Projects</h3>
+      <div class="cards-container">
+        <div class="work-card">
+          <!-- <div class="logo">
+            <img src="your-logo1-path.png" alt="Logo 1" />
+          </div>
+          <h3>Shree Raghavendra</h3> -->
           <p>
-            We deliver top-notch residential projects with a focus on modern
-            design and sustainability.
+            Cumulating Grapplings<br />
+            Cerslenas Construction<br />
+            Eoiscections Constitutions<br />
+            Mirsunetion
           </p>
+          <div class="card-footer">
+            <span>5/31/2021, 20:25</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>Commercial Projects</h3>
+
+        <div class="work-card">
+          <!-- <div class="logo">
+            <img src="your-logo2-path.png" alt="Logo 2" />
+          </div>
+          <h3>Shree Raghavendra</h3> -->
           <p>
-            Our commercial projects are designed to meet the needs of businesses
-            and industries of all sizes.
+            Innovative Construction Solutions<br />
+            Advanced Architectural Techniques<br />
+            07/12
           </p>
+          <div class="card-footer">
+            <span>View Details</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>Infrastructure Projects</h3>
+
+        <div class="work-card">
+          <!-- <div class="logo">
+            <img src="your-logo3-path.png" alt="Logo 3" />
+          </div>
+          <h3>Shree Constructions</h3> -->
           <p>
-            We specialize in large-scale infrastructure projects that enhance
-            connectivity and development.
+            Comprehensive Solutions<br />
+            Marketing & Operational Services<br />
+            P123@1019
           </p>
+          <div class="card-footer">
+            <span>Contact Us</span>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- Shaping Section -->
     <section class="shaping-section">
       <h3>Shaping the Future <br />of Construction</h3>
@@ -711,16 +954,15 @@
           <h3>How do I get a quote?</h3>
           <p>
             You can request a quote by filling out the contact form on our
-            website or by calling us directly at +91 7305715512. We will get
+            website or by calling us directly at +91 9945469441. We will get
             back to you as soon as possible with detailed information.
           </p>
         </div>
         <div class="faq-item">
           <h3>Where are you located?</h3>
           <p>
-            Our main office is located at 24/1, 3rd and 4th Floor, 100 Feet Rd,
-            HRBR Layout 1st Block, Balaji Layout, Subbaiahnapalya, Banasawadi,
-            Bengaluru - 560043.
+            Our main office is located at: #68, 3rd Cross Rd, Dinnur, RT Nagar,
+            Bengaluru, Karnataka 560032
           </p>
         </div>
       </div>
