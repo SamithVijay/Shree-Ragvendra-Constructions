@@ -38,35 +38,52 @@
         font-weight: bold;
       }
 
-      .nav ul {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
+      /* Base styles for larger screens (desktop) */
+      nav ul {
+        list-style: none;
         padding: 0;
+        margin: 20px 0;
+        text-align: center;
       }
 
-      .nav ul li {
+      nav ul li {
+        display: inline-block;
         margin: 0 15px;
       }
 
-      .nav ul li a {
+      nav ul li a {
         text-decoration: none;
+        font-size: 1.2rem;
         color: #333;
       }
 
-      .contact-btn {
-        color: white !important;
-        background-color: black;
+      /* Contact Button - always visible */
+      nav .contact-btn {
+        display: inline-block;
         padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
         border-radius: 5px;
-      }
-
-      .contact a {
-        color: white;
+        text-align: center;
+        font-size: 1rem;
       }
 
       .contact-btn:hover {
-        background-color: #555;
+        background-color: #333;
+      }
+
+      /* Hide navigation links in mobile view (below 768px) */
+      @media (max-width: 768px) {
+        nav ul li {
+          display: none; /* Hides the Home, About, Services, and Portfolio links */
+        }
+
+        /* Ensure the Contact button is visible and properly centered */
+        nav .contact-btn {
+          display: block;
+          margin: 20px auto; /* Center the button */
+          width: 80%; /* Make the button wider on mobile */
+        }
       }
 
       /* Hero Section Styling */
