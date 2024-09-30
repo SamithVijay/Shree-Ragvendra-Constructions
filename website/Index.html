@@ -38,7 +38,7 @@
         font-weight: bold;
       }
 
-      /* Base styles for larger screens (desktop) */
+      /* Navigation Menu */
       nav ul {
         list-style: none;
         padding: 0;
@@ -57,7 +57,7 @@
         color: #333;
       }
 
-      /* Contact Button - always visible */
+      /* Contact Button - Always visible */
       nav .contact-btn {
         display: inline-block;
         padding: 10px 20px;
@@ -95,19 +95,19 @@
           center center/cover;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start; /* Left-align content for desktop */
         color: white;
         text-align: left;
+        padding: 0 50px; /* Add some padding on the sides */
       }
 
+      /* Hero content alignment */
       .hero-content {
-        position: relative;
-        color: #000;
-        top: -10%;
-        left: -25%;
         max-width: 600px;
+        color: #000;
       }
 
+      /* Hero Heading */
       .hero h1 {
         font-size: 4rem;
         font-weight: bold;
@@ -117,6 +117,27 @@
       .hero p {
         font-size: 1.5rem;
         margin-bottom: 20px;
+      }
+
+      /* Mobile View Adjustments for Hero Section */
+      @media (max-width: 768px) {
+        .hero {
+          height: 60vh; /* Adjust height for mobile */
+          justify-content: center; /* Center content in mobile view */
+          padding: 0 20px; /* Less padding for mobile */
+        }
+
+        .hero-content {
+          text-align: center; /* Center text for mobile */
+        }
+
+        .hero h1 {
+          font-size: 2.5rem; /* Reduce heading size for mobile */
+        }
+
+        .hero p {
+          font-size: 1rem; /* Reduce paragraph size for mobile */
+        }
       }
 
       .quote-btn {
