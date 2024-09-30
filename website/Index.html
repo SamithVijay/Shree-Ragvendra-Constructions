@@ -59,13 +59,14 @@
 
       /* Contact Button - Always visible */
       nav .contact-btn {
-        display: inline-block;
+        display: block;
         padding: 10px 20px;
         background-color: #000;
         color: #fff;
         border-radius: 5px;
         text-align: center;
         font-size: 1rem;
+        width: fit-content;
       }
 
       .contact-btn:hover {
@@ -79,7 +80,7 @@
         }
 
         /* Ensure the Contact button is visible and properly centered */
-        nav .contact-btn {
+        .contact-btn {
           display: block;
           margin: 20px auto; /* Center the button */
           width: 80%; /* Make the button wider on mobile */
@@ -94,17 +95,19 @@
         background: url("./CiYhwDO1QYAG8juP6f1WLo-4096x4096.png") no-repeat
           center center/cover;
         display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Left-align content for desktop */
+        align-items: flex-start; /* Align content to top */
+        justify-content: flex-start; /* Align content to left for desktop */
         color: white;
         text-align: left;
-        padding: 0 50px; /* Add some padding on the sides */
+        padding: 0 0px;
       }
 
-      /* Hero content alignment */
+      /* Hero Content */
       .hero-content {
         max-width: 600px;
         color: #000;
+        margin-top: 50px; /* Add margin to push content down */
+        padding: 0 30px;
       }
 
       /* Hero Heading */
@@ -119,24 +122,37 @@
         margin-bottom: 20px;
       }
 
-      /* Mobile View Adjustments for Hero Section */
+      /* Contact Button Styling */
+      .contact-btn {
+        background-color: #000; /* Black button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      /* Mobile View Adjustments */
       @media (max-width: 768px) {
         .hero {
-          height: 60vh; /* Adjust height for mobile */
-          justify-content: center; /* Center content in mobile view */
-          padding: 0 20px; /* Less padding for mobile */
+          height: 60vh; /* Reduce height for mobile */
+          justify-content: flex-start; /* Keep content left-aligned */
+          padding: 0 20px;
         }
 
         .hero-content {
-          text-align: center; /* Center text for mobile */
+          text-align: left; /* Left-align text */
+          margin-top: 20px; /* Push content upwards a bit */
         }
 
         .hero h1 {
-          font-size: 2.5rem; /* Reduce heading size for mobile */
+          font-size: 2.5rem; /* Smaller heading for mobile */
         }
 
         .hero p {
-          font-size: 1rem; /* Reduce paragraph size for mobile */
+          font-size: 1rem; /* Smaller text for mobile */
         }
       }
 
@@ -416,31 +432,109 @@
         }
       }
 
-      /* Shaping Section */
-      .shaping-section {
-        margin-left: 20px;
+      /* Wrapper for Shaping Section */
+      .shaping-section-wrapper {
+        margin-bottom: 50px;
       }
 
-      .shaping-section h3 {
+      /* Main Heading for Shaping Section */
+      .shaping-heading {
+        font-size: 3rem;
         text-align: center;
-        font-size: 36px;
+        font-weight: bold;
         margin-bottom: 40px;
       }
 
-      .shaping-section h2 {
-        text-align: right;
-        font-size: 30px;
-        margin-right: 150px;
-        margin-bottom: 40px;
+      /* Shaping Section Styling */
+      .shaping-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 100px;
+        margin: 50px 0;
+      }
+
+      .shaping-left img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .shaping-right {
+        max-width: 600px;
+        padding-left: 50px;
+      }
+
+      .shaping-right h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .shaping-right p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .shaping-right a {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .shaping-right a:hover {
+        background-color: #333;
+      }
+
+      /* Mobile View */
+      @media (max-width: 768px) {
+        .shaping-heading {
+          font-size: 2rem;
+        }
+
+        .shaping-section {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .shaping-right {
+          padding-left: 0;
+          text-align: left;
+        }
+
+        .shaping-right h2 {
+          font-size: 2rem;
+        }
+
+        .shaping-right p {
+          font-size: 1rem;
+        }
+
+        .shaping-left img {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .shaping-right a {
+          padding: 8px 16px;
+          font-size: 1rem;
+        }
       }
 
       /* Testimonials Section */
       .testimonials-section {
         padding: 50px;
-        background-color: #f8f8f8;
+        background-color: #1c1f2a;
       }
 
       .testimonials-section h2 {
+        color: #fff;
         text-align: center;
         font-size: 36px;
         margin-bottom: 40px;
@@ -467,15 +561,93 @@
 
       .testimonial-text p {
         margin: 0;
-        font-size: 16px;
-        color: #777;
+        font-size: 18px;
+        color: #ccc;
       }
 
       .testimonial-text strong {
         display: block;
         font-size: 18px;
-        color: #333;
+        color: #ccc;
         margin-top: 10px;
+      }
+      /* Trusted Section */
+      .trusted-section {
+        background-color: #1c1f2a;
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .trusted-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .trusted-section p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
+
+      .trusted-features {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+
+      .trusted-feature {
+        max-width: 250px;
+        text-align: center;
+      }
+
+      .trusted-feature span {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .trusted-feature p {
+        font-size: 1rem;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background-color: #f5f5f5;
+        padding: 60px 20px;
+      }
+
+      .stats-wrapper {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+
+      .stat h2 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .stat p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .trusted-features {
+          flex-direction: column;
+        }
+
+        .stats-wrapper {
+          flex-direction: column;
+        }
+
+        .trusted-feature,
+        .stat {
+          margin-bottom: 30px;
+        }
       }
 
       /* Contact Us Section */
@@ -929,16 +1101,33 @@
       </div>
     </section>
 
-    <!-- Shaping Section -->
-    <section class="shaping-section">
-      <h3>Shaping the Future <br />of Construction</h3>
-      <h2>Elevating the Standard of Construction</h2>
-      <p class="shaping-text">
-        Our dedication to quality, safety, and environmental sustainability is
-        at the core of our operations. We work closely with our clients to
-        understand their unique needs
-      </p>
+    <section class="shaping-section-wrapper">
+      <!-- Heading -->
+      <h1 class="shaping-heading">Shaping the Future of Construction</h1>
+
+      <!-- Shaping Section (Image and Text Content) -->
+      <section class="shaping-section">
+        <!-- Left Side: Image/Graphic -->
+        <div class="shaping-left">
+          <img
+            src="./HpnfFMmILMVJhX2LvQuUC2-4096x4096.png"
+            alt="Shaping the Future Image"
+          />
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div class="shaping-right">
+          <h2>Elevating the Standard of Construction</h2>
+          <p>
+            Our dedication to quality, safety, and environmental sustainability
+            is at the core of our operations. We work closely with our clients
+            to understand their unique needs.
+          </p>
+          <a href="#">Explore Our Services</a>
+        </div>
+      </section>
     </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials-section">
       <h2>What Our Clients Say</h2>
@@ -1036,6 +1225,52 @@
             buildings.
           </p>
           <a href="#" class="blog-button">Read More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Trusted By Clients Section -->
+    <section class="trusted-section">
+      <div class="trusted-content">
+        <h1>Trusted by Clients Worldwide</h1>
+        <p>
+          Shree Raghavendra Constructions: Building the Future with Expertise
+        </p>
+
+        <div class="trusted-features">
+          <div class="trusted-feature">
+            <span>✈️</span>
+            <p>Explore our project locations and discover</p>
+          </div>
+          <div class="trusted-feature">
+            <span>💼</span>
+            <p>Learn about our diverse portfolio and awards</p>
+          </div>
+          <div class="trusted-feature">
+            <span>🏠</span>
+            <p>Discover our commitment to quality</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stats-wrapper">
+        <div class="stat">
+          <h2 class="count" data-target="100">0</h2>
+          <p>Countries Served</p>
+        </div>
+        <div class="stat">
+          <h2 class="count" data-target="120">0</h2>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat">
+          <h2 class="count" data-target="50">0</h2>
+          <p>Industry Awards Won</p>
+        </div>
+        <div class="stat">
+          <h2 class="count" data-target="98">0</h2>
+          <p>Customer Satisfaction Rate</p>
         </div>
       </div>
     </section>
@@ -1154,5 +1389,27 @@
         <p>&copy; 2024 Shree Raghavendra, Inc. All rights reserved.</p>
       </div>
     </footer>
+    <script>
+      // Counting Animation for Stats
+      const counters = document.querySelectorAll(".count");
+      const speed = 200;
+
+      counters.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          const increment = target / speed;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    </script>
   </body>
 </html>
